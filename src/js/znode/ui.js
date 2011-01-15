@@ -27,6 +27,9 @@ $(function(){
   $("#clear").click(function(){
     graph.clearAll();
   });
+  $("#help").click(function(){
+    window.open("http://www.zreference.com/znode", "_blank");
+  });
   
   $("#save").click(saveFile);
   
@@ -73,7 +76,7 @@ $(function(){
   
   $(".file").live('click', function() {
     var name = $(this).text();
-    $.getJSON("files/" + name, {n:Math.random()}, function(data){
+    $.getJSON("files/" + name + ".json", {n:Math.random()}, function(data){
        graph.fromJSON(data);
        
        filename.val(name);
