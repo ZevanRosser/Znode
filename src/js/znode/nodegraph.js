@@ -306,7 +306,7 @@ function NodeGraph(){
       });
     }
    
-    n.append("<textarea class='txt' />");
+    n.append("<textarea class='txt' spellcheck='false' />");
     var txt = $(".node .txt").last();
     txt.css("position","absolute");
    
