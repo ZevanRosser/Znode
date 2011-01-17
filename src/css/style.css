@@ -8,7 +8,7 @@ body, html{
 }
 #overlay{
   position: absolute;
-  background : url("images/trans.gif");
+  background : url("../images/trans.gif");
   z-index : 1000;
   cursor: pointer;
 }

@@ -516,15 +516,20 @@ function NodeGraph(){
     return new Node(x, y, w, h, noDelete);
   }
   
+  var defaultWidth = 100;
+  var defaultHeight = 50;
+  
   this.addNodeAtMouse = function(){
-    var temp = new Node(mouseX, mouseY + 30, currentNode.width(), currentNode.height());
+    //alert("Zevan");
+    var w = currentNode.width() || defaultWidth;
+    var h = currentNode.height () || defaultHeight;
+    var temp = new Node(mouseX, mouseY + 30, w, h);
     currentNode = temp;
     currentConnection = null;
   }
   
   function defaultNode(){
-    var defaultWidth = 100;
-    var defaultHeight = 50;
+    
     var temp = new Node(win.width() / 2 - defaultWidth / 2, 
                         win.height() / 2 - defaultHeight / 2,
                         defaultWidth, defaultHeight, true);
